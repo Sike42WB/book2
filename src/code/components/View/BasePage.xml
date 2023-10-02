@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="BasePage" extends="Group">
+	<interface>
+	
+		<field id="out-request" type="assocarray"/>
+		<field id="incoming-message" type="assocarray" alwaysNotify="true"/>
+
+		<field id="error" type="assocarray" alwaysNotify="true"/>
+		<field id="errorMsg" type="string" alwaysNotify="true"/>
+
+	</interface>
+
+
+		
+</component>

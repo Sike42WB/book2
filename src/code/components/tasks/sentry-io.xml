@@ -1,0 +1,11 @@
+<component name="SentryTask" extends="Task">
+
+    <script type="text/brightscript" uri="pkg:/components/tasks/sentry-io.brs" />
+    <script type="text/brightscript" uri="pkg:/components/constants.brs" />
+
+<interface>
+    <field id="error" type="assocarray" alwaysNotify="true" />
+    <field id="errorMsg" type="string" alwaysNotify="true" />
+</interface>
+
+</component>

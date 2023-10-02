@@ -1,0 +1,10 @@
+.vscode
+.github
+src/code/images/.DS_Store
+*.DS_Store
+out
+*.zip
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
+/.vs/Roku/v17/.wsuo
+/.vs/Roku/FileContentIndex

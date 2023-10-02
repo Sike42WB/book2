@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene" >
+		<script type="text/brightscript" uri="pkg:/components/Scene/MainScene.brs"/>
+		<script type="text/brightscript" uri="pkg:/components/constants.brs" />
+
+
+		<interface>
+				<field id="AnalyticsAuthExpiryTime" value="0" type="integer"/>
+				<field id="IpStackCountryCode" type="string" alwaysNotify="true"/>
+				<field id="IpStackIPAddress" type="string" alwaysNotify="true" />
+				<field id="error" type="assocArray" alwaysNotify="true" />
+				<field id="errorMsg" type="string" alwaysNotify="true" />
+
+		</interface>
+
+		<children>
+				<Group translation="[0, 60]">
+						<Poster translation="[820, 325]"
+		      		id="mainScenePreloaderGrpBackground"
+		      		width="280"
+		      		height="310" uri="pkg:/images/white_fill_corner_radius_10.9.png"  visible="false" />
+
+						<Group id="mainScenePreloaderGrp" visible="false">
+								<BusySpinner id="mainScenePreloader" translation="[888, 360]" control="start" clockwise="true" spinInterval="0.8"/>
+								<Label id="mainScenePreloaderLbl" translation="[0, 545]"  horizAlign="center" width="1920"  />
+						</Group>
+				</Group>
+
+				<Group id="bottomSection" translation="[100, 200]" />
+
+	      <Timer id="AnalyticsAuthExpiryTimer" repeat="false"/>
+				<Timer id="toastMessageTimer" repeat="true" duration="4" />
+				<Timer id="tHeartbeatTimer" repeat="true" duration="30" />
+
+				<Group id="ToastMsgBox" visible="false">
+						<Rectangle id="ToastRec" width="1920" height="1080" />
+						<Poster id="pLogo" uri="pkg:/images/terms-logo.png" opacity="1" width="457" height="125" translation="[731.5,250]" visible="true" />
+						<Label id="ToastMsgText" width="1720" translation="[100, 370]" wrap="true"  maxLines="2" horizAlign="center" />
+				</Group>
+
+				<Group id="TravesingPreloaderGrp" visible="false">
+						<Rectangle id="TravesingRec" translation="[0,0]" width="1920" height="1080" />
+
+						<Group translation="[0, 60]">
+								<Poster id="poster" translation="[820, 325]" width="280" height="310" uri="pkg:/images/white_fill_corner_radius_10.9.png" />
+
+								<Group>
+										<BusySpinner id="TravesingPreloader" translation="[888, 360]" control="start" clockwise="true" spinInterval="0.8"/>
+										<Label  id="TravelLabel" translation="[0, 545]" color="#ff0000" horizAlign="center" width="1920" />
+								</Group>
+						</Group>
+				</Group>
+		</children>
+</component>

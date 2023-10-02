@@ -1,0 +1,9 @@
+<component name="BaseTask" extends="Task">
+    <script type="text/brightscript" uri="pkg:/components/tasks/BaseTask.brs" />
+  
+<interface>
+    <field id="error" type="assocarray" alwaysNotify="true" />
+    <field id="errorMsg" type="string" alwaysNotify="true" />
+</interface>
+
+</component>
